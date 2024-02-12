@@ -1,0 +1,7 @@
+node_modules
+*.jpeg
+*.mp4
+_IGNORE_COVID_HELPER
+_IGNORE_session
+COVID_HELPER.data.json
+session.data.json
