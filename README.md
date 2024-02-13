@@ -2,14 +2,14 @@
 
 ## Deskripsi
 
-Dalam repo ini, membuat sebuah api yang langsung terhubung dengan whatsapp. bisa digunakan untuk banyak hal, mulai dari mendecrypt gambar sekali lihat, membuat gambar otomatis menjadi stiker, mengirim pesan secara otomatis, membalas pesan otomatis dan lain sebagai nya. Namun pada kali ini saya akan mengimplementasikan pembuatan mendecrypt gambar sekali lihat, bagaimana caranya? beginilah cara nya!
+Dalam repo ini, membuat sebuah bot yang langsung terhubung dengan whatsapp. bisa digunakan untuk banyak hal, mulai dari mendecrypt gambar sekali lihat, membuat gambar otomatis menjadi stiker, mengirim pesan secara otomatis, membalas pesan otomatis dan lain sebagai nya. Namun pada kali ini saya akan mengimplementasikan pembuatan mendecrypt gambar sekali lihat, bagaimana caranya? beginilah cara nya!
 
 ## Fitur
 
 - Decrypt Gambar 📷
 - Akses Whatsapp Api 📨
 - Bot Api 🤖
-- @open-wa/wa-automate 
+- @open-wa/wa-automate 🔃
 
 ## Cara Membuat Aplikasi
 
