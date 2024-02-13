@@ -41,3 +41,13 @@ Jika aplikasi sudah berjalan, maka akan muncul sebuah qr ( barcode ) anda bisa m
 
 ### Langkah 5: 
 Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kode yang telah anda buat. disini saya menggunakan `.open`, otomatis bot akan mengambil gambar dan menyimpan nya di localstorage anda, dan mengirim secara otomatis
+
+Kustomisasi: 
+- Anda bisa merubah perintah untuk menjalankan bot:
+  ```js
+  if (
+      message.fromMe === true && // Memastikan hanya pesan dari anda yang akan diproses
+      message.body.toLowerCase() === "customable" && // Anda bisa merubah ini sesuai dengan kebutuhan anda
+      message.quotedMsg
+    )
+  ```
