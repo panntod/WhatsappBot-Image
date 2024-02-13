@@ -11,25 +11,23 @@ function start(client: Client) {
       message.quotedMsg
     ) {
       const quotedMessage = message.quotedMsg;
-      
+
       if (quotedMessage.mimetype) {
         const fileName = `Saved-${Date.now()}.${mime.extension(
           quotedMessage.mimetype
         )}`;
-        
+
         const mediaData = await decryptMedia(quotedMessage);
-        const imageBase64 = `data:${
-          quotedMessage.mimetype
-        };base64,${mediaData.toString("base64")}`;
+        const imageBase64 = `data:${quotedMessage.mimetype};base64,${mediaData.toString("base64")}`;
 
-        const imageFolderPath = path.join(__dirname, 'images')
+        const imageFolderPath = path.join(__dirname, 'images');
 
-        if(!fs.existsSync(imageFolderPath){
-          fs.mkdirSync(imageFolderPath)
+        if (!fs.existsSync(imageFolderPath)) {
+          fs.mkdirSync(imageFolderPath);
         }
 
-        const finalImage = path.join(imageFolderPath, fileName)
-        
+        const finalImage = path.join(imageFolderPath, fileName);
+
         fs.writeFile(finalImage, mediaData, function (err) {
           if (err) {
             return console.log(err);
@@ -40,12 +38,13 @@ function start(client: Client) {
         await client.sendImage(
           message.chatId,
           imageBase64,
-          filename,
+          fileName,
           "Here's your fav photo"
         );
       }
     }
   });
 }
+
 
 create().then((client) => start(client));
