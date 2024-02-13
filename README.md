@@ -42,7 +42,7 @@ Jika aplikasi sudah berjalan, maka akan muncul sebuah qr ( barcode ) anda bisa m
 ### Langkah 5: 
 Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kode yang telah anda buat. disini saya menggunakan `.open`, otomatis bot akan mengambil gambar dan menyimpan nya di localstorage anda, dan mengirim secara otomatis
 
-Kustomisasi: 
+## Kustomisasi: 
 - Anda bisa merubah perintah untuk menjalankan bot:
   ```js
   if (
@@ -59,3 +59,12 @@ Kustomisasi:
         const fileName = `Saved-${Date.now()}.${mime.extension(quotedMessage.mimetype)}`; // Anda bisa merubah ini sesuai dengan kebutuhan anda
   }
   ```
+- Anda juga dapat merubah folder yang akan digunakan untuk menyimpan file di local anda
+  ```js
+  const imageFolderPath = path.join(__dirname, 'customable'); // Anda dapat merubah nama folder yang ingin digunakan untuk menyimpan saved foto
+
+   if (!fs.existsSync(imageFolderPath)) {
+      fs.mkdirSync(imageFolderPath); // Memastikan bahwa folder sudah ada, jika tidak ditemukan maka akan tergenerate secara otomatis
+  }
+  ```
+  
