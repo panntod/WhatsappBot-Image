@@ -49,5 +49,13 @@ Kustomisasi:
       message.fromMe === true && // Memastikan hanya pesan dari anda yang akan diproses
       message.body.toLowerCase() === "customable" && // Anda bisa merubah ini sesuai dengan kebutuhan anda
       message.quotedMsg
-    )
+    ){
+        //Code TODO Here
+    }
+  ```
+- Anda juga bisa merubah format file yang akan disimpan di local anda
+  ```js
+  if (quotedMessage.mimetype) {
+        const fileName = `Saved-${Date.now()}.${mime.extension(quotedMessage.mimetype)}`; // Anda bisa merubah ini sesuai dengan kebutuhan anda
+  }
   ```
