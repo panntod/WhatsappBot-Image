@@ -43,7 +43,7 @@ Jika aplikasi sudah berjalan, maka akan muncul sebuah qr ( barcode ) anda bisa m
 Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kode yang telah anda buat. disini saya menggunakan `.open`, otomatis bot akan mengambil gambar dan menyimpan nya di localstorage anda, dan mengirim secara otomatis
 
 ## Kustomisasi: 
-- Anda bisa merubah perintah untuk menjalankan bot:
+1. Anda bisa merubah perintah untuk menjalankan bot:
   ```js
   if (
       message.fromMe === true && // Memastikan hanya pesan dari anda yang akan diproses
@@ -53,13 +53,15 @@ Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kod
         //Code TODO Here
     }
   ```
-- Anda juga bisa merubah format file yang akan disimpan di local anda
+
+2. Anda juga bisa merubah format file yang akan disimpan di local anda
   ```js
   if (quotedMessage.mimetype) {
         const fileName = `Saved-${Date.now()}.${mime.extension(quotedMessage.mimetype)}`; // Anda bisa merubah ini sesuai dengan kebutuhan anda
   }
   ```
-- Anda juga dapat merubah folder yang akan digunakan untuk menyimpan file di local anda
+
+3. Anda juga dapat merubah folder yang akan digunakan untuk menyimpan file di local anda
   ```js
   const imageFolderPath = path.join(__dirname, 'customable'); // Anda dapat merubah nama folder yang ingin digunakan untuk menyimpan saved foto
 
@@ -67,4 +69,13 @@ Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kod
       fs.mkdirSync(imageFolderPath); // Memastikan bahwa folder sudah ada, jika tidak ditemukan maka akan tergenerate secara otomatis
   }
   ```
-  
+
+4. Anda juga dapat merubah comment dari foto yang akan dikirim oleh bot
+   ```js
+   await client.sendImage(
+          message.chatId,
+          imageBase64,
+          fileName,
+          "customable" // Isi sesuai dengan kebutuhan anda
+    );
+   ```
