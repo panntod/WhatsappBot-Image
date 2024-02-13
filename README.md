@@ -71,11 +71,17 @@ Tunggu sampai muncul tulisan `bot siap dipakai`, dan kirim pesan anda dengan kod
   ```
 
 4. Anda juga dapat merubah comment dari foto yang akan dikirim oleh bot
-   ```js
+  ```js
    await client.sendImage(
           message.chatId,
           imageBase64,
           fileName,
-          "customable" // Isi sesuai dengan kebutuhan anda
-    );
-   ```
+   "customable" // Isi sesuai dengan kebutuhan anda
+  );
+  ```
+
+<div align="center">
+  <h2>⚠️DISCLAIMER⚠️</h2>
+</div>
+
+Aplikasi ini melibatkan pihak ketiga yang dikembangkan oleh [Mohammed Shah](https://github.com/smashah) di Amerika, dengan lisensi [Extension of the Hippocratic License - an Ethical Source license](https://ethicalsource.dev) dan [the Do Not Harm License](https://github.com/raisely/NoHarm). Segala bentuk tindakan kriminal (sabotase, pencurian data, phishing, dll.) berada di luar tanggung jawab kami. Gunakan bot ini sesuai dengan ketentuan WhatsApp yang berlaku, karena penggunaan sembarangan dapat menyebabkan nomor Anda terkena banned❗. Pastikan memutus koneksi perangkat ketika tidak digunakan. Segala tindakan kelalaian adalah tanggung jawab pribadi Anda; informasi lebih lanjut dapat ditemukan di [Dokumentasi Resmi OpenWa](https://docs.openwa.dev/).
